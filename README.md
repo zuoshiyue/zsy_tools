@@ -1,10 +1,13 @@
 # zsy_tools
 数据源参考：  
-[JX3API](https://www.jx3api.com/#/)
+[JX3API](https://www.jx3api.com/#/)  
 [魔盒](https://www.jx3box.com/index/)
+- [X] 日常
+- [ ] 马场 doing
+- [ ] 宠物
+- [ ] 服务器状态
+- [ ] 声望进度
 
-日常：
-https://cms.jx3box.com/api/cms/game/daily?date=2024-02-23
 
 马场：
 https://next2.jx3box.com/api/game/reporter/horse?pageIndex=1&pageSize=50&server=%E6%A2%A6%E6%B1%9F%E5%8D%97&type=horse

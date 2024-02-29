@@ -27,12 +27,12 @@ public class CommonFrameworkModule extends SimpleModule {
         addSerializer(Timestamp.class, new TimestampJsonSerializer());
         addDeserializer(Timestamp.class, new TimestampJsonDeserializer());
         // 兼容jackson 2.5以下版本, 对Map.Entry序列化做特殊处理
-        addSerializer(Map.Entry.class, new JsonSerializer<>() {
+        addSerializer(Map.Entry.class, new JsonSerializer<Map.Entry>() {
             @Override
-            public void serialize(Map.Entry entry, JsonGenerator gen, SerializerProvider serializers)
-                    throws IOException {
-                gen.writeObject(new KeyValue(entry.getKey(), entry.getValue()));
+            public void serialize(Map.Entry o, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
+                jsonGenerator.writeObject(new KeyValue(o.getKey(), o.getValue()));
             }
+
         });
     }
 }

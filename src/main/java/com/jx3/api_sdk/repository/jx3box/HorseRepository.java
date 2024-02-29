@@ -5,8 +5,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.jx3.api_sdk.util.HttpClientUtil;
 import com.jx3.api_sdk.util.JsonUtil;
 import com.jx3.api_sdk.vo.HorseInfo;
-import io.micrometer.common.util.StringUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;

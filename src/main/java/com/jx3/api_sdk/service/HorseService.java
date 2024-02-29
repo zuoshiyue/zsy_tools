@@ -8,11 +8,11 @@ import com.jx3.api_sdk.util.Safes;
 import com.jx3.api_sdk.vo.HorseDTO;
 import com.jx3.api_sdk.vo.HorseInfo;
 import com.jx3.api_sdk.vo.Status;
-import io.micrometer.common.util.StringUtils;
-import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -74,7 +74,7 @@ public class HorseService {
                     .collect(Collectors.toList());
             return contentList;
         } else if (HorseSubTypeEnum.SHARE_MSG.getType().equalsIgnoreCase(subtype)){
-            //地图][杨新]大声喊：赤兔马已到达半月湖附近，有志于征服赤兔的侠士可速速赶去！
+            //[地图][杨新]大声喊：赤兔马已到达半月湖附近，有志于征服赤兔的侠士可速速赶去！
             return Collections.singletonList(content);
         }
         throw new StatusCodeException(Status.error("获取马场信息，未匹配到有效的喊话解析方法"));
